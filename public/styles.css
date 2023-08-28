@@ -1,0 +1,311 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+    padding: 0; /* Remove body padding to prevent extra space */
+}
+
+main {
+    padding: 36px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+    padding: 20px;
+}
+
+.header--image {
+    height: 100%;
+    margin-right: 6px;
+}
+
+.header--title {
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Display elements in a single column */
+    }
+}
+
+.container {
+    display: flex;
+    max-width: 800px; /* Decreased max-width */
+    margin: 0 auto;
+    padding: 10px; /* Decreased padding */
+    justify-content: space-between; /* Elements are evenly spaced between each other */
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+    justify-content: center; /* Center the elements */
+}
+
+.image-container {
+    flex: 1; /* Makes both elements equally sized */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px; /* Added margin for space around the elements */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.image-container h5 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.image-container p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.image-container1 {
+    flex: 1; /* Makes both elements equally sized */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px; /* Added margin for space around the elements */
+}
+
+.image-container1 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.image-container1 h5 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.image-container1 p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.upload-button {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: #fff;
+    width: 160px; /* Fixed width */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center the text within the button */
+}
+
+.upload-button input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+.input-section {
+    font-family: "Karla", sans-serif; /* Font styling for the input section */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Increased max-width for larger input section */
+    padding: 20px; /* Increased padding for larger input section */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Added margin to separate from the header */
+}
+
+.input-section label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.input-section input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.input-section input[type="number"] {
+    width: 50px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Additional spacing between checkboxes and inputs */
+.input-section label:nth-child(2) {
+    margin-right: 40px;
+}
+
+.input-section label:nth-child(3) {
+    margin-right: 40px;
+}
+
+
+.crop-section {
+    font-family: "Karla", sans-serif; /* Font styling for the crop section */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Increased max-width for larger input section */
+    padding: 20px; /* Increased padding for larger input section */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Added margin to separate from the header */
+}
+
+.crop-section label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.crop-section input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.crop-section input[type="number"] {
+    width: 50px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+
+.resize-section {
+    font-family: "Karla", sans-serif; /* Font styling for the resize section */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Increased max-width for larger input section */
+    padding: 20px; /* Increased padding for larger input section */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Added margin to separate from the header */
+}
+
+.resize-section label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.resize-section input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.resize-section input[type="number"] {
+    width: 70px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Advisory paragraph for resize section */
+
+
+.rotate-section {
+    font-family: "Karla", sans-serif; /* Font styling for the rotate section */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    max-width: 800px; /* Increased max-width for larger input section */
+    padding: 20px; /* Increased padding for larger input section */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Added margin to separate from the header */
+}
+
+.rotate-section label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.rotate-section input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.rotate-section input[type="number"] {
+    width: 70px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+.bottom-button-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Advisory paragraph for rotate section */
+.edit-button {
+    flex: 1; /* Both buttons will have the same size and share the available space equally */
+    margin: 5px; /* Add margin between the buttons (adjust as needed) */
+    /* Rest of the button styles remain the same */
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    font-family: "Karla", sans-serif;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  }
+

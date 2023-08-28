@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing Automation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img 
+            src="Fav.svg" 
+            class="header--image"
+        />
+        <h2 class="header--title">Image Processing Automation</h2>
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <img src="im1.jpg" alt="Image" id="uploadedImage">
+            <h5>Uploaded Image</h5>
+            
+        </div>
+        <div class="image-container1">
+            <img src="im1.jpg" alt="Image" id="editedImage">
+            <h5>Edited Image</h5>
+            
+        </div>
+    </div>
+    <div class="center-container">
+        <label class="upload-button">
+            Upload Image
+            <input type="file" accept="image/jpeg, image/png, image/gif image/jpg" id="imageInput">
+        </label>
+    </div>
+    <div class="center-container">
+        <div class="input-section">
+            <label>
+                <input type="checkbox" id="grayscaleCheckbox"> Grayscale
+            </label>
+            <label>
+                <input type="checkbox" id="blurCheckbox"> Blur
+                <input type="number" id="blurValueInput" min="0" max="100" step="5">
+            </label>
+            <label>
+                <input type="checkbox" id="brightnessCheckbox"> Brightness
+                <input type="number" id="brightnessValueInput" min="0" max="10" step="0.5">
+            </label>
+            <label>
+                <input type="checkbox"> Edge Detection
+            </label>
+        </div>
+    </div>
+    <div class="center-container">
+        <div class="crop-section">
+            <label>
+                <input type="checkbox"> Crop
+            </label>
+            <label>
+                Left
+                <input type="number" min="0" max="100" step="1"> %
+            </label>
+            <label>
+                Top
+                <input type="number" min="0" max="100" step="1"> %
+            </label>
+            <label>
+                Width
+                <input type="number" min="0" max="100" step="1"> %
+            </label>
+            <label>
+                Height
+                <input type="number" min="0" max="100" step="1"> %
+            </label>
+        </div>
+    <div class="center-container">
+        <div class="resize-section" id="resize-section">
+            <label>
+                <input type="checkbox" id="resize-checkbox"> Resize
+            </label>
+            <label>
+                Width
+                <input type="number" min="0" max="5000" step="1" id="width-input-resize"> px
+            </label>
+            <label>
+                Height
+                <input type="number" min="0" max="5000" step="1" id="height-input-resize"> px
+            </label>
+            <!-- Advisory paragraph for resize section -->
+        </div>
+    </div>
+
+    <!-- Rotate Section -->
+    <div class="center-container">
+        <div class="rotate-section">
+            <label>
+                <input type="checkbox" id="rotate-check"> Rotate
+            </label>
+            <label>
+                Angle
+                <input type="number" min="-360" max="360" step="1" id="rotate-val"> degrees
+            </label>
+            <!-- Advisory paragraph for rotate section -->
+    </div>
+    </div>
+    <div class="bottom-button-wrapper">
+    <button class="edit-button" id="edit-button">
+        Edit Image
+    </button>
+
+    <button class="edit-button" id="download-button">
+        download Image
+    </button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
